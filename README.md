@@ -50,7 +50,6 @@ cd mundo-pet
 2. Instale as dependências
 
 ````bash
-Editar
 npm install
 ````
 
