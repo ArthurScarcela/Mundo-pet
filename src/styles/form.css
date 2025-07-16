@@ -1,0 +1,273 @@
+#background-transparent {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(4px);
+  visibility: hidden;
+}
+
+#new-schedule-btn {
+  right: 30px;
+  bottom: 33px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  padding: .75rem 1.5rem;
+  background-color: #8978fa;
+
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  font-family: "Inter Tight", sans-serif;
+  color: #050505;
+
+  border-radius: .5rem;
+  box-shadow: #9282fa7c 0px .5px 10px;
+
+  cursor: pointer;
+
+  &:hover {
+    background-color: #BDB4FA;
+  }
+}
+
+#form-container {
+  visibility: hidden;
+  position: absolute;
+  top: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #23242C;
+  padding-inline: 2.5rem;
+  border-radius: .75rem;
+
+
+
+  & header {
+    & h2 {
+      margin-top: 2.25rem;
+      font: bold 24px/32px "Iter Tight", sans-serif;
+    }
+
+    & p {
+      margin-top: .25rem;
+      font: medium 14px/24px "Inter", sans-serif;
+      color: #98959D;
+    }
+  }
+
+  & form {
+    width: 100%;
+    margin-top: 1.75rem;
+    display: flex;
+    flex-direction: column;
+
+    & label {
+      font: bold 14px/24px "Inter", sans-serif;
+    }
+
+    & input,
+    textarea {
+      background: transparent;
+      border: none;
+      width: 100%;
+      outline: none;
+      resize: none;
+      color: #FFFFFF;
+      font: 400 16px/150% "Inter", sans-serif;
+
+      &::placeholder {
+        font: 400 16px/150% "Inter", sans-serif;
+        color: #98959D;
+      }
+    }
+  }
+
+  & .input-container {
+    margin-top: .25rem;
+    display: flex;
+    border: 1px solid #3E3C41;
+    border-radius: .5rem;
+    gap: .5rem;
+    padding: .75rem;
+    margin-bottom: 1rem;
+
+    &:hover {
+      border: 1px solid #86818C;
+    }
+
+    &:focus-within {
+      border: 1px solid #8978fa;
+    }
+  }
+
+  & .schedule-date-hour-container {
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+
+    & div {
+      width: 100%;
+    }
+
+    &:nth-child(1),
+    :nth-child(3),
+    .input-container-date,
+    .input-container-hour {
+      display: flex;
+    }
+
+    & .input-container-date,
+    .input-container-hour {
+      border: 1px solid #3E3C41;
+      border-radius: .5rem;
+      gap: .5rem;
+      padding: .75rem;
+      width: 100%;
+      height: 3rem;
+      color: #98959D;
+
+
+      &:hover {
+        border: 1px solid #86818C;
+      }
+
+      &:focus-within {
+        border: 1px solid #8978fa;
+      }
+    }
+
+    & input[type='date'] {
+      color: #98959D;
+    }
+
+    & select {
+      width: 100%;
+      background: transparent;
+      border: none;
+      color: #98959D;
+
+      font: 500 16px/150% "Inter Tight", sans-serif;
+
+      outline: none;
+      text-transform: uppercase;
+
+      & option {
+        background-color: #23242C;
+        color: #52498b;
+        font: 600 16px/150% "Inter Tight", sans-serif;
+        text-align: start;
+        padding-left: 1rem;
+      }
+    }
+  }
+
+  & .btn-container {
+    display: flex;
+    width: 100%;
+    justify-content: end;
+
+    & #to-schedule {
+      background-color: #8978fa;
+      border: none;
+      text-transform: uppercase;
+      border-radius: .5rem;
+
+      padding: .75rem 1.5rem;
+
+      font: bold 16px/24px "Iter Tight", sans-serif;
+
+      margin-top: 1.75rem;
+      margin-bottom: 2.25rem;
+
+      cursor: pointer;
+    }
+  }
+
+}
+
+footer {
+  display: flex;
+  width: 100%;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  background-color: #23242C;
+  bottom: 0;
+
+  & #new-schedule-btn-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: .75rem 1.5rem;
+    background-color: #8978fa;
+
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    font-family: "Inter Tight", sans-serif;
+    color: #050505;
+
+    border-radius: .5rem;
+    box-shadow: #9282fa7c 0px .5px 10px;
+
+    cursor: pointer;
+
+    margin-block: 1.125rem;
+
+    &:hover {
+      background-color: #BDB4FA;
+    }
+  }
+}
+
+.show {
+  animation: show 1s forwards;
+}
+
+
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (width <=768px) {
+
+  & .only-desktop {
+    display: none;
+  }
+
+  & #form-container {
+    margin-inline: 20px;
+
+    & .schedule-date-hour-container {
+      flex-direction: column;
+    }
+  }
+}
+
+@media (width > 768px) {
+
+  & footer {
+    display: none;
+  }
+
+  & #new-schedule-btn {
+    display: flex;
+    position: absolute;
+  }
+}

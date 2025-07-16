@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="./src/styles/index.css">
+  <title>Mundo Pet</title>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <span class="logo">
+    <img src="/src/assets/icons/logo.svg" alt="">
+  </span>
+  <header id="date-select">
+    <div>
+      <h1>Sua agenda</h1>
+      <p>Aqui você pode ver todos os clientes e serviços agendados para hoje.</p>
+    </div>
+    <div class="data-input-container" id="schedules-by-day">
+      <img src="/src/assets/icons/Calendar-Minimalistic--Streamline-Solar.svg" alt="">
+      <input type="date" name="date-input" id="date-input">
+    </div>
+  </header>
+
+
+  <main class="list-by-day-container">
+
+    <!--Morning -->
+    <section class="list-by-day">
+      <header id="list-by-day-morning">
+        <div>
+          <img src="./src/assets/icons/Sun-Fog--Streamline-Solar.svg" alt="">
+          <h3>Manhã</h3>
+        </div>
+        <span>09h-12h</span>
+      </header>
+      <ul class="schedule-list" id="morning-list">
+      </ul>
+    </section>
+
+    <!--Afternoon-->
+    <section class="list-by-day">
+      <header id="list-by-day-afternoon">
+        <div>
+          <img src="./src/assets/icons/Cloud-Sun-4--Streamline-Solar.svg" alt="">
+          <h3>Tarde</h3>
+        </div>
+        <span>13h-18h</span>
+      </header>
+
+      <ul class="schedule-list" id="afternoon-list">
+        <!-- <li class="schedule-info">
+          <span id="schedule-hour" class="list-hour">13:00</span>
+          <p id="client-name" class="list-name"><Strong id="pet-name">Mel</Strong> / João Souza</p>
+          <p id="service-description" class="list-description">Corte de Unhas</p>
+          <span id="remove-schedule" class="list-remove">
+            <span id="remove">Remover agendamento</span>
+          </span>
+        </li> -->
+      </ul>
+    </section>
+
+
+    <!--Night-->
+    <section class="list-by-day">
+      <header id="list-by-day-night">
+        <div>
+          <img src="./src/assets/icons/Moon-Stars--Streamline-Solar.svg" alt="">
+          <h3>Noite</h3>
+        </div>
+        <span>18h-21h</span>
+      </header>
+      <ul class="schedule-list" id="night-list">
+      </ul>
+    </section>
+  </main>
+
+  <div id="background-transparent"></div>
+
+  <span id="new-schedule-btn" class="new-schedule only-desktop">
+    Novo Agendamento
+  </span>
+
+  <footer>
+    <span id="new-schedule-btn-footer" class="new-schedule">
+      Novo Agendamento
+    </span>
+  </footer>
+
+  <aside id="form-container">
+    <header>
+      <h2>Agende um atendimento</h2>
+      <p>Preencha os dados do cliente para realizar o agendamento:</p>
+    </header>
+
+    <form>
+      <label for="name">Nome do tutor</label>
+      <div class="input-container">
+        <img src="/src/assets/icons/User--Streamline-Solar.svg" alt="name">
+        <input type="text" name="name" id="name" placeholder="Nome">
+      </div>
+
+      <label for="pet-name">Nome do pet</label>
+      <div class="input-container">
+        <img src="/src/assets/icons/Pet-Paw--Streamline-Core.svg" alt="pet">
+        <input type="text" name="pet" id="pet" placeholder="Nome do pet">
+      </div>
+
+      <label for="phone">Telefone</label>
+      <div class="input-container">
+        <img src="/src/assets/icons/Phone--Streamline-Solar.svg" alt="phone">
+        <input type="text" name="phone" id="phone" placeholder="(00) 0 0000-0000">
+      </div>
+
+      <label for="description">Descrição do serviço</label>
+      <div class="input-container">
+        <textarea name="description" id="description" placeholder="Ex. Banho e tosa"></textarea>
+      </div>
+
+      <div class="schedule-date-hour-container">
+        <div>
+          <label for="new-schedule-date">Data</label>
+          <div class="input-container-date">
+            <img src="/src/assets/icons/Calendar-Minimalistic--Streamline-Solar.svg" alt="">
+            <input type="date" name="new-schedule-date" id="new-schedule-date">
+          </div>
+        </div>
+
+        <div>
+          <label for="new-schedule-hour">Hora</label>
+          <div class="input-container-hour">
+            <img src="/src/assets/icons/Clock-Circle--Streamline-Solar.svg" alt="">
+            <select name="new-schedule-hour" id="new-schedule-hour">
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="btn-container">
+        <button id="to-schedule">Agendar</button>
+      </div>
+    </form>
+  </aside>
+
+  <script type="module" src="/src/services/schedule-new.js"></script>
+</body>
+
+</html>
