@@ -1,58 +1,5 @@
 {
   "schedules": [
-    {
-      "id": "1752674807248",
-      "name": "Testes",
-      "pet": "Testedog",
-      "phone": "(12) 34567-9810",
-      "description": "Banho",
-      "date": "2025-07-16",
-      "hour": "21:00"
-    },
-    {
-      "id": "1752678034513",
-      "name": "Arthur Scarcela",
-      "pet": "Ragnar",
-      "phone": "(89) 46541-6415",
-      "description": "Banho e tosa",
-      "date": "2025-07-16",
-      "hour": "14:00"
-    },
-    {
-      "id": "1752679502207",
-      "name": "Emilly",
-      "pet": "Billy",
-      "phone": "(61) 64187-4164",
-      "description": "Banho e tosa",
-      "date": "2025-07-17",
-      "hour": "12:00"
-    },
-    {
-      "id": "1752679502211",
-      "name": "Emilly",
-      "pet": "Billy",
-      "phone": "(61) 64187-41646",
-      "description": "Banho e tosa",
-      "date": "2025-07-17",
-      "hour": "12:00"
-    },
-    {
-      "id": "1752679967812",
-      "name": "Testes",
-      "pet": "1",
-      "phone": "(23) 48549-6854",
-      "description": "648",
-      "date": "2025-07-16",
-      "hour": "19:00"
-    },
-    {
-      "id": "1752680194450",
-      "name": "Arthur Scarcela",
-      "pet": "Junior",
-      "phone": "(61) 23618-9641",
-      "description": "Banho",
-      "date": "2025-07-17",
-      "hour": "15:00"
-    }
+    
   ]
 }
